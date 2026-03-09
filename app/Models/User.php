@@ -64,4 +64,8 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    /* ------------------- relaciones nuevas para las tablas------------------------ */
+
+    
 }

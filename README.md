@@ -9,7 +9,7 @@ Desarrollado con Laravel 11, Jetstream (Livewire) y MySQL.
 - **Socio:** Consulta de membresía y perfil.
 
 ## 🚀 Instalación para Colaboradores
-1. Clonar el repositorio: `git clone [URL_DEL_REPO]`
+1. Clonar el repositorio: `git clone https://github.com/Fernando241/gymflow.git`
 2. Instalar dependencias: `composer install` y `npm install`
 3. Copiar el entorno: `cp .env.example .env`
 4. Generar clave: `php artisan key:generate`
