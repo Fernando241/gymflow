@@ -25,7 +25,7 @@
                     <p class="text-gray-400 leading-relaxed text-lg">
                         Estás en la central de mando de <span class="font-bold">GymFlow</span>. 
                         @if (Auth()->user()->role == 'admin')
-                            -> Desde aquí puedes gestionar socios, planes y finanzas.
+                            -> Desde aquí puedes gestionar usuarios, roles y membresias.
                         @endif
                     </p>
                 </div>
@@ -39,7 +39,7 @@
                                 </svg>
                                 <h2 class="ml-3 text-xl font-semibold text-white">Gestión de Socios</h2>
                             </div>
-                            <p class="mt-4 text-gray-400 text-sm">Administra los 50 socios registrados y sus datos de contacto.</p>
+                            <p class="mt-4 text-gray-400 text-sm">Administra y concede permisos a los usuarios registrados</p>
                         </a>
                     @endif
                     @if (in_array(auth()->user()->role, ['admin', 'empleado']))
@@ -50,7 +50,7 @@
                                 </svg>
                                 <h2 class="ml-3 text-xl font-semibold text-white">Planes y Membresías</h2>
                             </div>
-                            <p class="mt-4 text-gray-400 text-sm">Configura los precios de los planes mensual, trimestral y anual.</p>
+                            <p class="mt-4 text-gray-400 text-sm">Revisa, crea, edita o elimina Membresias</p>
                         </a>
                     @endif
 
@@ -71,6 +71,12 @@
                                 {{ Auth::user()->emergency_contact_name ?? 'No registrado' }}</p>
                                 <p><span class="font-semibold text-white">Teléfono contacto:</span> 
                                 {{ Auth::user()->emergency_contact_phone ?? 'No registrado' }}</p>
+                            </div><br>
+                            <div class="text-center">
+                                <a href="{{ route('perfil.edit') }}"
+                                    class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-white hover:text-black">
+                                    Editar o añadir datos
+                                </a>
                             </div>
                         </div>
 
@@ -128,7 +134,6 @@
                 </div>
             </div>
         </div><br><br><br>
-        <p class="text-white text-center text-sm">Universidad de Cundinamarca - Facultad: Ingenieria de Sistemas<br>Proyecto final ACA <br>Materia: Administración de Bases de Datos <br><b>Integrantes:</b><br>Backend: Luis Fernando Rolón - Frontend: Dairo, Camilo </p>
+        <p class="text-white text-center text-sm">Corporación Unificada Nacional de Educación Superior CUN <br>Facultad: Ingenieria de Sistemas<br>Proyecto final ACA<br>Materia: Administración de Bases de Datos<br><b>Integrantes:</b><br><b>Backend: </b>Luis Fernando Rolón<br><b>Frontend: </b>Dairo Guzmán, Camilo Martínez<br>2026</p>
     </div>
-    <div><p class="text-white">Universidad de Cundinamarca - Proyecto ACA - Materia: Administración de Bases de Datos </p></div>
 </x-app-layout>

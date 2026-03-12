@@ -29,3 +29,11 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/usuarios/{user}/edit', [UserController::class, 'edit'])->name('usuarios.edit');
     Route::put('usuarios/{user}', [UserController::class, 'update'])->name('usuarios.update');
 });
+
+/* ruta edición datos propios del usuario */
+use App\Http\Controllers\PerfilController;
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/perfil/editar', [PerfilController::class, 'edit'])->name('perfil.edit');
+    Route::put('/perfil/actualizar', [PerfilController::class, 'update'])->name('perfil.update');
+});

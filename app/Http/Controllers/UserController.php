@@ -36,4 +36,5 @@ class UserController extends Controller
         return redirect()->route('usuarios.index')
             ->with('success', 'Rol Actualizado correctamente');
     }
+
 }

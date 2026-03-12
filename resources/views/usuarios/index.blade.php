@@ -1,5 +1,13 @@
 <x-app-layout>
     <div class="container p-6">
+
+    {{-- Para ver Alert --}}
+    @if (session('success'))
+        <div class="bg-green-100 text-green-800 p-3 border border-green-300 mb-4 rounded text-center">
+            {{ session('success') }}
+        </div>
+    @endif   
+        
         <h1 class="text-center text-blue-950"><b>Usuarios registrados</b></h1>
 
             <table class="min-w-full border-separate border-spacing-y-3">
